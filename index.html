@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <link rel="shortcut icon" href="img/favicon.ico">
-    <title>Home - Wiki</title>
+    <title>Home - MKDocs Wiki</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
     <link rel="stylesheet" href="css/theme.css" />
@@ -50,7 +50,7 @@
         <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
             <div class="wy-side-scroll">
                 <div class="wy-side-nav-search">
-                    <a href="." class="icon icon-home"> Wiki
+                    <a href="." class="icon icon-home"> MKDocs Wiki
                         <img src= "./sources/images/Jack_Icon.png" class="logo" alt="logo"/>
                     </a> <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
@@ -71,6 +71,8 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#mkdocs-extension">MKDocs Extension</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mkdocs-plugin">MKDocs Plugin</a>
+    </li>
     </ul>
                             </li>
                             </ul>
@@ -82,7 +84,7 @@
                         </li>
                         <li class="toctree-l1"><a class="reference internal" href="guide/How-to_change_mkdocs_maxwidth.html">How To Change mkdocs MaxWidth</a>
                         </li>
-                        <li class="toctree-l1"><a class="reference internal" href="guide/markdown_test.html">Test</a>
+                        <li class="toctree-l1"><a class="" href="guide/markdown_test.md">Test</a>
                         </li>
                         </ul>
                 </div>
@@ -94,7 +96,7 @@
             
             <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
                 <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-                <a href=".">Wiki</a>
+                <a href=".">MKDocs Wiki</a>
             </nav>
 
             
@@ -133,12 +135,24 @@ pip install pyembed
 <li><code>mkdocs -h</code> - Print help message and exit.</li>
 </ul>
 <p>Sample</p>
-<pre><code>mkdir mkdocs_test
+<pre><code># create project folder
+mkdir mkdocs_test
 cd mkdocs_test
+
+# create new mkdocs project in this directory
 mkdocs new .
+
+# site/ -&gt; gitignore
+echo &quot;site/&quot; &gt;&gt; .gitignore
+
+# start serve
 mkdocs serve
+
+# build Site
 mkdocs build
 
+# push to github gh-pages
+mkdocs gh-deploy
 </code></pre>
 
 <h2 id="project-layout">Project layout</h2>
@@ -149,11 +163,15 @@ docs/
 </code></pre>
 <h2 id="mkdocs-extension">MKDocs Extension</h2>
 <ul>
-<li>https://python-markdown.github.io/extensions/</li>
-<li>https://facelessuser.github.io/pymdown-extensions/</li>
-<li>https://github.com/Python-Markdown/markdown/wiki/Third-Party-Extensions</li>
-<li>https://github.com/pyembed/pyembed-markdown</li>
-<li>https://github.com/mkdocs/mkdocs/wiki/MkDocs-Plugins</li>
+<li><a href="https://python-markdown.github.io/extensions/">https://python-markdown.github.io/extensions/</a></li>
+<li><a href="https://facelessuser.github.io/pymdown-extensions/">https://facelessuser.github.io/pymdown-extensions/</a></li>
+<li><a href="https://github.com/Python-Markdown/markdown/wiki/Third-Party-Extensions">https://github.com/Python-Markdown/markdown/wiki/Third-Party-Extensions</a></li>
+<li><a href="https://github.com/pyembed/pyembed-markdown">https://github.com/pyembed/pyembed-markdown</a></li>
+<li><a href="https://github.com/mkdocs/mkdocs/wiki/MkDocs-Plugins">https://github.com/mkdocs/mkdocs/wiki/MkDocs-Plugins</a></li>
+</ul>
+<h2 id="mkdocs-plugin">MKDocs Plugin</h2>
+<ul>
+<li>https://www.mkdocs.org/user-guide/plugins/#developing-plugins</li>
 </ul> 
                         </div>
                     </div> <footer>
