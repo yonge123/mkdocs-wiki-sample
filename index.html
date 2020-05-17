@@ -1,132 +1,381 @@
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="en">
-<!--<![endif]-->
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <title>Home - MKDocs Wiki</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-    <link rel="stylesheet" href="css/theme.css" />
-    <link rel="stylesheet" href="css/theme_extra.css" />
-    <link rel="stylesheet" href="css/github.min.css" />
-    <link href="css/github.css" rel="stylesheet" /> 
-    <script>
-        // Current page data
-        var mkdocs_page_name = {
-            {
-                page.title | tojson | safe
-            }
-        };
-        var mkdocs_page_input_path = {
-            {
-                page.file.src_path | string | tojson | safe
-            }
-        };
-        var mkdocs_page_url = {
-            {
-                page.abs_url | tojson | safe
-            }
-        };
-    </script>
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
     
-    <script src="js/jquery-2.1.1.min.js" defer></script>
-    <script src="js/modernizr-2.8.3.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <script>
-        hljs.initHighlightingOnLoad();
-    </script>  
-</head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.1.7">
+    
+    
+      
+        <title>Home - MKDocs Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.4c7052ca.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#welcome-to-mkdocs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="." title="MKDocs Wiki" class="md-header-nav__button md-logo" aria-label="MKDocs Wiki">
+      
+  <img src="sources/images/Jack_Icon.png" alt="logo">
 
-<body class="wy-body-for-nav" role="document">
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            MKDocs Wiki
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="MKDocs Wiki" class="md-nav__button md-logo" aria-label="MKDocs Wiki">
+      
+  <img src="sources/images/Jack_Icon.png" alt="logo">
 
-    <div class="wy-grid-for-nav">
+    </a>
+    MKDocs Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Home
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="index.html" title="Home" class="md-nav__link md-nav__link--active">
+      Home
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install-mkdocs" class="md-nav__link">
+    Install MKDocs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    Commands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-layout" class="md-nav__link">
+    Project layout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mkdocs-extension" class="md-nav__link">
+    MKDocs Extension
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mkdocs-plugin" class="md-nav__link">
+    MKDocs Plugin
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Guide
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Guide" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="guide/examples.html" title="Example" class="md-nav__link">
+      Example
+    </a>
+  </li>
 
         
-        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-            <div class="wy-side-scroll">
-                <div class="wy-side-nav-search">
-                    <a href="." class="icon icon-home"> MKDocs Wiki
-                        <img src= "./sources/images/Jack_Icon.png" class="logo" alt="logo"/>
-                    </a> <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-                </div>
+          
+          
+          
 
-                <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                        <ul class="current" >
-                            <li class="toctree-l1 current"><a class="reference internal current" href="index.html">Home</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#install-mkdocs">Install MKDocs</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#project-layout">Project layout</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#mkdocs-extension">MKDocs Extension</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#mkdocs-plugin">MKDocs Plugin</a>
-    </li>
-    </ul>
-                            </li>
-                            </ul>
-                    <p class="caption"><span class="caption-text">Guide</span></p>
-                    <ul>
-                        <li class="toctree-l1"><a class="reference internal" href="guide/examples.html">Example</a>
-                        </li>
-                        <li class="toctree-l1"><a class="reference internal" href="guide/How-to_add_mkdocs_logo.html">How To Add Logo</a>
-                        </li>
-                        <li class="toctree-l1"><a class="reference internal" href="guide/How-to_change_mkdocs_maxwidth.html">How To Change mkdocs MaxWidth</a>
-                        </li>
-                        </ul>
-                </div>
-            </div>
-        </nav>
 
-        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+  <li class="md-nav__item">
+    <a href="guide/How-to_add_mkdocs_logo.html" title="How To Add Logo" class="md-nav__link">
+      How To Add Logo
+    </a>
+  </li>
 
-            
-            <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-                <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-                <a href=".">MKDocs Wiki</a>
-            </nav>
+        
+          
+          
+          
 
-            
-            <div class="wy-nav-content">
-                <div class="rst-content">
-                    <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href=".">Docs</a> &raquo;</li>
+
+  <li class="md-nav__item">
+    <a href="guide/How-to_change_mkdocs_maxwidth.html" title="How To Change mkdocs MaxWidth" class="md-nav__link">
+      How To Change mkdocs MaxWidth
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
     
-      
-    
-    <li>Home</li>
-    <li class="wy-breadcrumbs-aside">
-      
-    </li>
   </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
-  <hr/>
-</div>
-                    <div role="main">
-                        <div class="section">
-                             <h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install-mkdocs" class="md-nav__link">
+    Install MKDocs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    Commands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-layout" class="md-nav__link">
+    Project layout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mkdocs-extension" class="md-nav__link">
+    MKDocs Extension
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mkdocs-plugin" class="md-nav__link">
+    MKDocs Plugin
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="welcome-to-mkdocs">Welcome to MkDocs<a class="headerlink" href="#welcome-to-mkdocs" title="Permanent link">&para;</a></h1>
 <p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="install-mkdocs">Install MKDocs</h2>
-<pre><code>pip install mkdocs
+<h2 id="install-mkdocs">Install MKDocs<a class="headerlink" href="#install-mkdocs" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>pip install mkdocs
 pip install pymdownx
+pip install mkdocs-material
 pip install pyembed
+</code></pre></div>
 
-</code></pre>
-
-<h2 id="commands">Commands</h2>
+<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
 <li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
@@ -134,7 +383,7 @@ pip install pyembed
 <li><code>mkdocs -h</code> - Print help message and exit.</li>
 </ul>
 <p>Sample</p>
-<pre><code># create project folder
+<div class="highlight"><pre><span></span><code># create project folder
 mkdir mkdocs_test
 cd mkdocs_test
 
@@ -180,16 +429,17 @@ pages:
     - public
   only:
   - master
+</code></pre></div>
 
-</code></pre>
-
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
+<h2 id="project-layout">Project layout<a class="headerlink" href="#project-layout" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>mkdocs.yml    # The configuration file.
 docs/
     index.md  # The documentation homepage.
     ...       # Other markdown pages, images and other files.
-</code></pre>
-<h2 id="mkdocs-extension">MKDocs Extension</h2>
+</code></pre></div>
+
+
+<h2 id="mkdocs-extension">MKDocs Extension<a class="headerlink" href="#mkdocs-extension" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://python-markdown.github.io/extensions/">https://python-markdown.github.io/extensions/</a></li>
 <li><a href="https://facelessuser.github.io/pymdown-extensions/">https://facelessuser.github.io/pymdown-extensions/</a></li>
@@ -197,64 +447,77 @@ docs/
 <li><a href="https://github.com/pyembed/pyembed-markdown">https://github.com/pyembed/pyembed-markdown</a></li>
 <li><a href="https://github.com/mkdocs/mkdocs/wiki/MkDocs-Plugins">https://github.com/mkdocs/mkdocs/wiki/MkDocs-Plugins</a></li>
 </ul>
-<h2 id="mkdocs-plugin">MKDocs Plugin</h2>
+<h2 id="mkdocs-plugin">MKDocs Plugin<a class="headerlink" href="#mkdocs-plugin" title="Permanent link">&para;</a></h2>
 <ul>
-<li>https://www.mkdocs.org/user-guide/plugins/#developing-plugins</li>
-</ul> 
-                        </div>
-                    </div> <footer>
+<li><a href="https://www.mkdocs.org/user-guide/plugins/#developing-plugins">https://www.mkdocs.org/user-guide/plugins/#developing-plugins</a></li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="guide/examples.html" class="btn btn-neutral float-right" title="Example">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
-  </div>
-
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer> 
-                </div>
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+        
+          <a href="guide/examples.html" title="Example" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Example
+              </div>
             </div>
-
-        </section>
-
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     </div>
-
-    <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
       
+    </div>
+  </div>
+</footer>
       
+    </div>
+    
+      <script src="assets/javascripts/vendor.22b62ea4.min.js"></script>
+      <script src="assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
-        <span style="margin-left: 15px"><a href="guide/examples.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      <script>
+        app = initialize({
+          base: ".",
+          features: [],
+          search: Object.assign({
+            worker: "assets/javascripts/worker/search.f6ebf1dc.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
-    </span>
-</div>
-    <script>
-        var base_url = '.';
-    </script>
-    <script src="js/theme.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
-    <script src="search/main.js" defer></script>
-    <script defer>
-        window.onload = function() {
-            SphinxRtdTheme.Navigation.enable({
-                {
-                    'true'
-                    if config.theme.sticky_navigation
-                    else 'false'
-                }
-            });
-        };
-    </script>
-
-</body>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
 </html>

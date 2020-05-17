@@ -1,233 +1,872 @@
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="en">
-<!--<![endif]-->
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <link rel="shortcut icon" href="../img/favicon.ico">
-    <title>Example - MKDocs Wiki</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/theme_extra.css" />
-    <link rel="stylesheet" href="../css/github.min.css" />
-    <link href="../css/github.css" rel="stylesheet" /> 
-    <script>
-        // Current page data
-        var mkdocs_page_name = {
-            {
-                page.title | tojson | safe
-            }
-        };
-        var mkdocs_page_input_path = {
-            {
-                page.file.src_path | string | tojson | safe
-            }
-        };
-        var mkdocs_page_url = {
-            {
-                page.abs_url | tojson | safe
-            }
-        };
-    </script>
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
     
-    <script src="../js/jquery-2.1.1.min.js" defer></script>
-    <script src="../js/modernizr-2.8.3.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <script>
-        hljs.initHighlightingOnLoad();
-    </script>  
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-    <div class="wy-grid-for-nav">
-
-        
-        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-            <div class="wy-side-scroll">
-                <div class="wy-side-nav-search">
-                    <a href=".." class="icon icon-home"> MKDocs Wiki
-                        <img src= "../sources/images/Jack_Icon.png" class="logo" alt="logo"/>
-                    </a> <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-                </div>
-
-                <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                        <ul>
-                            <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
-                            </li>
-                            </ul>
-                    <p class="caption"><span class="caption-text">Guide</span></p>
-                    <ul class="current" >
-                        <li class="toctree-l1 current"><a class="reference internal current" href="examples.html">Example</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#h2">H2</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#h3">H3</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#h4">H4</a>
-    </li>
-        </ul>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#italic">Italic</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#bold">Bold</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#bold-with-italic">Bold with Italic</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#scratch">Scratch</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#mark">Mark</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#link">Link</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#table">Table</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#source-code">source code</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#java">Java</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#python">python</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#ruby">ruby</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#text">text</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#task-lists">Task lists</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#emoji">Emoji</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#math">Math</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#image">Image</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#video">Video</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#youtube">Youtube</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#local">Local</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#html">HTML</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#admonition">Admonition</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#note">Note</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#tip">Tip</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#warning">Warning</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#danger">Danger</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                        </li>
-                        <li class="toctree-l1"><a class="reference internal" href="How-to_add_mkdocs_logo.html">How To Add Logo</a>
-                        </li>
-                        <li class="toctree-l1"><a class="reference internal" href="How-to_change_mkdocs_maxwidth.html">How To Change mkdocs MaxWidth</a>
-                        </li>
-                        </ul>
-                </div>
-            </div>
-        </nav>
-
-        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-            
-            <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-                <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-                <a href="..">MKDocs Wiki</a>
-            </nav>
-
-            
-            <div class="wy-nav-content">
-                <div class="rst-content">
-                    <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.1.7">
+    
     
       
-        
-          <li>Guide &raquo;</li>
-        
+        <title>Example - MKDocs Wiki</title>
       
     
-    <li>Example</li>
-    <li class="wy-breadcrumbs-aside">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4c7052ca.min.css">
       
-    </li>
-  </ul>
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
   
-  <hr/>
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#markdown-example" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="MKDocs Wiki" class="md-header-nav__button md-logo" aria-label="MKDocs Wiki">
+      
+  <img src="../sources/images/Jack_Icon.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            MKDocs Wiki
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Example
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-                    <div role="main">
-                        <div class="section">
-                             <h1 id="markdown-example">Markdown Example</h1>
-<pre><code># Markdown Example
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MKDocs Wiki" class="md-nav__button md-logo" aria-label="MKDocs Wiki">
+      
+  <img src="../sources/images/Jack_Icon.png" alt="logo">
+
+    </a>
+    MKDocs Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Guide
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Guide" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Example
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="examples.html" title="Example" class="md-nav__link md-nav__link--active">
+      Example
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#h2" class="md-nav__link">
+    H2
+  </a>
+  
+    <nav class="md-nav" aria-label="H2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#h3" class="md-nav__link">
+    H3
+  </a>
+  
+    <nav class="md-nav" aria-label="H3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#h4" class="md-nav__link">
+    H4
+  </a>
+  
+    <nav class="md-nav" aria-label="H4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#h5" class="md-nav__link">
+    H5
+  </a>
+  
+    <nav class="md-nav" aria-label="H5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#h6" class="md-nav__link">
+    H6
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#italic" class="md-nav__link">
+    Italic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bold" class="md-nav__link">
+    Bold
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bold-with-italic" class="md-nav__link">
+    Bold with Italic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scratch" class="md-nav__link">
+    Scratch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mark" class="md-nav__link">
+    Mark
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link" class="md-nav__link">
+    Link
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table" class="md-nav__link">
+    Table
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-code" class="md-nav__link">
+    source code
+  </a>
+  
+    <nav class="md-nav" aria-label="source code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#java" class="md-nav__link">
+    Java
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruby" class="md-nav__link">
+    ruby
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text" class="md-nav__link">
+    text
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grouping-code-blocks" class="md-nav__link">
+    grouping code blocks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-lists" class="md-nav__link">
+    Task lists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emoji" class="md-nav__link">
+    Emoji
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#math" class="md-nav__link">
+    Math
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image" class="md-nav__link">
+    Image
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video" class="md-nav__link">
+    Video
+  </a>
+  
+    <nav class="md-nav" aria-label="Video">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#youtube" class="md-nav__link">
+    Youtube
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local" class="md-nav__link">
+    Local
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html" class="md-nav__link">
+    HTML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admonition" class="md-nav__link">
+    Admonition
+  </a>
+  
+    <nav class="md-nav" aria-label="Admonition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#note" class="md-nav__link">
+    Note
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip" class="md-nav__link">
+    Tip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warning" class="md-nav__link">
+    Warning
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#danger" class="md-nav__link">
+    Danger
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="How-to_add_mkdocs_logo.html" title="How To Add Logo" class="md-nav__link">
+      How To Add Logo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="How-to_change_mkdocs_maxwidth.html" title="How To Change mkdocs MaxWidth" class="md-nav__link">
+      How To Change mkdocs MaxWidth
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#h2" class="md-nav__link">
+    H2
+  </a>
+  
+    <nav class="md-nav" aria-label="H2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#h3" class="md-nav__link">
+    H3
+  </a>
+  
+    <nav class="md-nav" aria-label="H3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#h4" class="md-nav__link">
+    H4
+  </a>
+  
+    <nav class="md-nav" aria-label="H4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#h5" class="md-nav__link">
+    H5
+  </a>
+  
+    <nav class="md-nav" aria-label="H5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#h6" class="md-nav__link">
+    H6
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#italic" class="md-nav__link">
+    Italic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bold" class="md-nav__link">
+    Bold
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bold-with-italic" class="md-nav__link">
+    Bold with Italic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scratch" class="md-nav__link">
+    Scratch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mark" class="md-nav__link">
+    Mark
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link" class="md-nav__link">
+    Link
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table" class="md-nav__link">
+    Table
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-code" class="md-nav__link">
+    source code
+  </a>
+  
+    <nav class="md-nav" aria-label="source code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#java" class="md-nav__link">
+    Java
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruby" class="md-nav__link">
+    ruby
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text" class="md-nav__link">
+    text
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grouping-code-blocks" class="md-nav__link">
+    grouping code blocks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-lists" class="md-nav__link">
+    Task lists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emoji" class="md-nav__link">
+    Emoji
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#math" class="md-nav__link">
+    Math
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image" class="md-nav__link">
+    Image
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video" class="md-nav__link">
+    Video
+  </a>
+  
+    <nav class="md-nav" aria-label="Video">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#youtube" class="md-nav__link">
+    Youtube
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local" class="md-nav__link">
+    Local
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html" class="md-nav__link">
+    HTML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admonition" class="md-nav__link">
+    Admonition
+  </a>
+  
+    <nav class="md-nav" aria-label="Admonition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#note" class="md-nav__link">
+    Note
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip" class="md-nav__link">
+    Tip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warning" class="md-nav__link">
+    Warning
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#danger" class="md-nav__link">
+    Danger
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="markdown-example">Markdown Example<a class="headerlink" href="#markdown-example" title="Permanent link">&para;</a></h1>
+<div class="highlight"><pre><span></span><code># Markdown Example
 
 ## H2
 ### H3
 #### H4
 ##### H5
 ###### H6
-</code></pre>
+</code></pre></div>
 
-<h2 id="h2">H2</h2>
-<h3 id="h3">H3</h3>
-<h4 id="h4">H4</h4>
-<h5 id="h5">H5</h5>
-<h6 id="h6">H6</h6>
+<h2 id="h2">H2<a class="headerlink" href="#h2" title="Permanent link">&para;</a></h2>
+<h3 id="h3">H3<a class="headerlink" href="#h3" title="Permanent link">&para;</a></h3>
+<h4 id="h4">H4<a class="headerlink" href="#h4" title="Permanent link">&para;</a></h4>
+<h5 id="h5">H5<a class="headerlink" href="#h5" title="Permanent link">&para;</a></h5>
+<h6 id="h6">H6<a class="headerlink" href="#h6" title="Permanent link">&para;</a></h6>
 <p><br></p>
-<h2 id="italic">Italic</h2>
-<pre><code>Emphasis, aka italics, with *asterisks* or _underscores_.
-</code></pre>
+<h2 id="italic">Italic<a class="headerlink" href="#italic" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>Emphasis, aka italics, with *asterisks* or _underscores_.
+</code></pre></div>
 
 <p>Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.</p>
 <p><br></p>
-<h2 id="bold">Bold</h2>
-<pre><code>Strong emphasis, aka bold, with double **asterisks** or __underscores__.
-</code></pre>
+<h2 id="bold">Bold<a class="headerlink" href="#bold" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>Strong emphasis, aka bold, with double **asterisks** or __underscores__.
+</code></pre></div>
 
 <p>Strong emphasis, aka bold, with double <strong>asterisks</strong> or <strong>underscores</strong>.</p>
 <p><br></p>
-<h2 id="bold-with-italic">Bold with Italic</h2>
-<pre><code>Combined emphasis with **asterisks and _underscores_**.
-</code></pre>
+<h2 id="bold-with-italic">Bold with Italic<a class="headerlink" href="#bold-with-italic" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>Combined emphasis with **asterisks and _underscores_**.
+</code></pre></div>
 
 <p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p>
 <p><br></p>
-<h2 id="scratch">Scratch</h2>
-<pre><code>&lt;del&gt;Scratch this&lt;/del&gt;
-</code></pre>
+<h2 id="scratch">Scratch<a class="headerlink" href="#scratch" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>&lt;del&gt;Scratch this&lt;/del&gt;
+</code></pre></div>
 
 <p><del>Scratch this</del></p>
 <p><br></p>
-<h2 id="mark">Mark</h2>
-<pre><code>&lt;mark&gt;mark me&lt;/mark&gt;
-</code></pre>
+<h2 id="mark">Mark<a class="headerlink" href="#mark" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>&lt;mark&gt;mark me&lt;/mark&gt;
+</code></pre></div>
 
 <p><mark>mark me</mark></p>
 <p><br></p>
-<pre><code>- fruit
+<div class="highlight"><pre><span></span><code>- fruit
   - banana
   - mango
   - pitaya
-</code></pre>
+</code></pre></div>
 
 <ul>
 <li>fruit</li>
@@ -236,7 +875,7 @@
 <li>pitaya</li>
 </ul>
 <p><br></p>
-<pre><code>- `#F00`
+<div class="highlight"><pre><span></span><code>- `#F00`
 - `#F00A`
 - `#FF0000`
 - `#FF0000AA`
@@ -245,7 +884,7 @@
 - `RGBA(0,255,0,0.3)`
 - `HSL(540,70%,50%)`
 - `HSLA(540,70%,50%,0.3)`
-</code></pre>
+</code></pre></div>
 
 <ul>
 <li><code>#F00</code></li>
@@ -259,12 +898,12 @@
 <li><code>HSLA(540,70%,50%,0.3)</code></li>
 </ul>
 <p><br></p>
-<pre><code>Inline `code` has `back-ticks around` it.
-</code></pre>
+<div class="highlight"><pre><span></span><code>Inline `code` has `back-ticks around` it.
+</code></pre></div>
 
 <p>Inline <code>code</code> has <code>back-ticks around</code> it.</p>
 <p><br></p>
-<pre><code>&gt;&gt;&gt;
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt;
 
 If you paste a message from somewhere else
 
@@ -273,7 +912,7 @@ that spans multiple lines,
 you can quote that without having to manually prepend `&gt;` to every line!
 
 &gt;&gt;&gt;
-</code></pre>
+</code></pre></div>
 
 <blockquote>
 <blockquote>
@@ -289,27 +928,24 @@ you can quote that without having to manually prepend `&gt;` to every line!
 </blockquote>
 </blockquote>
 <p><br></p>
-<h2 id="link">Link</h2>
-<pre><code>[go back to home page](../index.md) 
-</code></pre>
+<h2 id="link">Link<a class="headerlink" href="#link" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>[go back to home page](../index.md) 
+</code></pre></div>
 
 <p><a href="../index.html">go back to home page</a> </p>
 <p><br></p>
-<pre><code>
-[go back to home page]
+<div class="highlight"><pre><span></span><code>[go back to home page]
 
 [go back to home page]: ../index.md
-
-</code></pre>
+</code></pre></div>
 
 <p><a href="../index.html">go back to home page</a></p>
 <p><br></p>
 <p>Sphinx Python-Markdown 에서 아래 처럼 table 안에 있는 link 형식으로 작성 시 파싱 문제 있음 </p>
-<pre><code>| header 1 | header 2 | header 3 |
+<div class="highlight"><pre><span></span><code>| header 1 | header 2 | header 3 |
 | ---      |  ------  |---------:|
 | cell 1   | cell 2   | [go back to home page](../index.md) |
-
-</code></pre>
+</code></pre></div>
 
 <table>
 <thead>
@@ -328,13 +964,13 @@ you can quote that without having to manually prepend `&gt;` to every line!
 </tbody>
 </table>
 <p><br></p>
-<h2 id="table">Table</h2>
-<pre><code>| header 1 | header 2 | header 3 |
+<h2 id="table">Table<a class="headerlink" href="#table" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>| header 1 | header 2 | header 3 |
 | ---      |  ------  |---------:|
 | cell 1   | cell 2   | cell 3   |
-| cell 4 | cell 5 is longer | cell 6 is much longer than the others, but that's ok. It will eventually wrap the text when the cell is too large for the display size. |
+| cell 4 | cell 5 is longer | cell 6 is much longer than the others, but that&#39;s ok. It will eventually wrap the text when the cell is too large for the display size. |
 | cell 7   |          | cell &lt;br&gt; 9 |
-</code></pre>
+</code></pre></div>
 
 <table>
 <thead>
@@ -363,22 +999,22 @@ you can quote that without having to manually prepend `&gt;` to every line!
 </tbody>
 </table>
 <p><br></p>
-<h2 id="source-code">source code</h2>
+<h2 id="source-code">source code<a class="headerlink" href="#source-code" title="Permanent link">&para;</a></h2>
 <p><br></p>
-<h3 id="java">Java</h3>
-<pre><code>```javascript
+<h3 id="java">Java<a class="headerlink" href="#java" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>```javascript
 var s = &quot;JavaScript syntax highlighting&quot;;
 alert(s);
 ```
-</code></pre>
+</code></pre></div>
 
-<pre><code class="javascript">var s = &quot;JavaScript syntax highlighting&quot;;
-alert(s);
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="s2">&quot;JavaScript syntax highlighting&quot;</span><span class="p">;</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
+</code></pre></div>
 
 <p><br></p>
-<h3 id="python">python</h3>
-<pre><code>```python
+<h3 id="python">python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>```python
 def function():
     #indenting works just fine in the fenced code block
     s = &quot;Python syntax highlighting&quot;
@@ -387,7 +1023,7 @@ def function():
 try:
     from DistUtilsExtra.command import *
 except ImportError:
-    print &gt;&gt; sys.stderr, 'To build Sphinx-Theme-Brandenburg you need https://launchpad.net/python-distutils-extra'
+    print &gt;&gt; sys.stderr, &#39;To build Sphinx-Theme-Brandenburg you need https://launchpad.net/python-distutils-extra&#39;
     sys.exit(1)
 
 
@@ -395,58 +1031,97 @@ def read_from_file(path):
     with open(path) as input:
         return input.read()
 ```
-</code></pre>
+</code></pre></div>
 
-<pre><code class="python">def function():
-    #indenting works just fine in the fenced code block
-    s = &quot;Python syntax highlighting&quot;
-    print s
-
-
-try:
-    from DistUtilsExtra.command import *
-except ImportError:
-    print &gt;&gt; sys.stderr, 'To build Sphinx-Theme-Brandenburg you need https://launchpad.net/python-distutils-extra'
-    sys.exit(1)
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">function</span><span class="p">():</span>
+    <span class="c1">#indenting works just fine in the fenced code block</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Python syntax highlighting&quot;</span>
+    <span class="nb">print</span> <span class="n">s</span>
 
 
-def read_from_file(path):
-    with open(path) as input:
-        return input.read()
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">DistUtilsExtra.command</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="o">&gt;&gt;</span> <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">,</span> <span class="s1">&#39;To build Sphinx-Theme-Brandenburg you need https://launchpad.net/python-distutils-extra&#39;</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
-</code></pre>
+
+<span class="k">def</span> <span class="nf">read_from_file</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">as</span> <span class="nb">input</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">input</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</code></pre></div>
 
 <p><br></p>
-<h3 id="ruby">ruby</h3>
-<pre><code>```ruby
-require 'redcarpet'
+<h3 id="ruby">ruby<a class="headerlink" href="#ruby" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>```ruby
+require &#39;redcarpet&#39;
 markdown = Redcarpet.new(&quot;Hello World!&quot;)
 puts markdown.to_html
 ```
-</code></pre>
+</code></pre></div>
 
-<pre><code class="ruby">require 'redcarpet'
-markdown = Redcarpet.new(&quot;Hello World!&quot;)
-puts markdown.to_html
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nb">require</span> <span class="s1">&#39;redcarpet&#39;</span>
+<span class="n">markdown</span> <span class="o">=</span> <span class="no">Redcarpet</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">markdown</span><span class="o">.</span><span class="n">to_html</span>
+</code></pre></div>
 
 <p><br></p>
-<h3 id="text">text</h3>
-<pre><code>```
+<h3 id="text">text<a class="headerlink" href="#text" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>```
 No language indicated, so no syntax highlighting.
 s = &quot;There is no highlighting for this.&quot;
-But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+But let&#39;s throw in a &lt;b&gt;tag&lt;/b&gt;.
 ```
-</code></pre>
+</code></pre></div>
 
-<pre><code>No language indicated, so no syntax highlighting.
+<div class="highlight"><pre><span></span><code>No language indicated, so no syntax highlighting.
 s = &quot;There is no highlighting for this.&quot;
-But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
-</code></pre>
+But let&#39;s throw in a &lt;b&gt;tag&lt;/b&gt;.
+</code></pre></div>
 
+<h3 id="grouping-code-blocks">grouping code blocks<a class="headerlink" href="#grouping-code-blocks" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Bash</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nb">echo</span> <span class="s2">&quot;Hello world!&quot;</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">C</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello world!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">C++</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Hello world!&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">C#</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Program</span> <span class="p">{</span>
+  <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Hello world!&quot;</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
 <p><br></p>
-<h2 id="task-lists">Task lists</h2>
-<pre><code>- [X] item 1
+<h2 id="task-lists">Task lists<a class="headerlink" href="#task-lists" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>- [X] item 1
     * [X] item A
     * [ ] item B
         more text
@@ -456,48 +1131,46 @@ But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
     * [X] item C
 - [ ] item 2
 - [ ] item 3
-</code></pre>
+</code></pre></div>
 
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" disabled checked/> item 1<ul class="task-list">
-<li class="task-list-item"><input type="checkbox" disabled checked/> item A</li>
-<li class="task-list-item"><input type="checkbox" disabled/> item B
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> item 1<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> item A</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> item B
     more text<ul class="task-list">
-<li class="task-list-item"><input type="checkbox" disabled checked/> item a</li>
-<li class="task-list-item"><input type="checkbox" disabled/> item b</li>
-<li class="task-list-item"><input type="checkbox" disabled checked/> item c</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> item a</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> item b</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> item c</li>
 </ul>
 </li>
-<li class="task-list-item"><input type="checkbox" disabled checked/> item C</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> item C</li>
 </ul>
 </li>
-<li class="task-list-item"><input type="checkbox" disabled/> item 2</li>
-<li class="task-list-item"><input type="checkbox" disabled/> item 3</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> item 2</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> item 3</li>
 </ul>
 <p><br></p>
-<h2 id="emoji">Emoji</h2>
-<pre><code>Sometimes you want to :monkey: around a bit and add some :star2: to your :speech_balloon:. Well we have a gift for you:
+<h2 id="emoji">Emoji<a class="headerlink" href="#emoji" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>Sometimes you want to :monkey: around a bit and add some :star2: to your :speech_balloon:. Well we have a gift for you:
 
 :zap: You can use emoji anywhere GFM is supported. :v:
 
 You can use it to point out a :bug: or warn about :speak_no_evil: patches. And if someone improves your really :snail: code, send them some :birthday:. People will :heart: you for that.
 
-If you are new to this, don't be :fearful:. You can easily join the emoji :family:. All you need to do is to look up one of the supported codes.
+If you are new to this, don&#39;t be :fearful:. You can easily join the emoji :family:. All you need to do is to look up one of the supported codes.
 
 Consult the [Emoji Cheat Sheet](https://www.emojicopy.com) for a list of all supported emoji codes. :thumbsup:
-</code></pre>
+</code></pre></div>
 
-<p>Sometimes you want to <img alt="🐒" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f412.png" title=":monkey:" /> around a bit and add some <img alt="🌟" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f31f.png" title=":star2:" /> to your <img alt="💬" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4ac.png" title=":speech_balloon:" />. Well we have a gift for you:</p>
-<p><img alt="⚡️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/26a1.png" title=":zap:" /> You can use emoji anywhere GFM is supported. <img alt="✌️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/270c.png" title=":v:" /></p>
-<p>You can use it to point out a <img alt="🐛" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f41b.png" title=":bug:" /> or warn about <img alt="🙊" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f64a.png" title=":speak_no_evil:" /> patches. And if someone improves your really <img alt="🐌" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f40c.png" title=":snail:" /> code, send them some <img alt="🎂" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f382.png" title=":birthday:" />. People will <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2764.png" title=":heart:" /> you for that.</p>
-<p>If you are new to this, don't be <img alt="😨" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f628.png" title=":fearful:" />. You can easily join the emoji <img alt="👪" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f46a.png" title=":family:" />. All you need to do is to look up one of the supported codes.</p>
-<p>Consult the <a href="https://www.emojicopy.com">Emoji Cheat Sheet</a> for a list of all supported emoji codes. <img alt="👍" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44d.png" title=":thumbsup:" /></p>
+<p>Sometimes you want to <img alt="🐒" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f412.svg" title=":monkey:" /> around a bit and add some <img alt="🌟" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f31f.svg" title=":star2:" /> to your <img alt="💬" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4ac.svg" title=":speech_balloon:" />. Well we have a gift for you:</p>
+<p><img alt="⚡" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26a1.svg" title=":zap:" /> You can use emoji anywhere GFM is supported. <img alt="✌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/270c.svg" title=":v:" /></p>
+<p>You can use it to point out a <img alt="🐛" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f41b.svg" title=":bug:" /> or warn about <img alt="🙊" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f64a.svg" title=":speak_no_evil:" /> patches. And if someone improves your really <img alt="🐌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f40c.svg" title=":snail:" /> code, send them some <img alt="🎂" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f382.svg" title=":birthday:" />. People will <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /> you for that.</p>
+<p>If you are new to this, don't be <img alt="😨" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f628.svg" title=":fearful:" />. You can easily join the emoji <img alt="👪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f46a.svg" title=":family:" />. All you need to do is to look up one of the supported codes.</p>
+<p>Consult the <a href="https://www.emojicopy.com">Emoji Cheat Sheet</a> for a list of all supported emoji codes. <img alt="👍" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f44d.svg" title=":thumbsup:" /></p>
 <p><br></p>
-<h2 id="math">Math</h2>
-<pre><code>
-$p(x|y) = \frac{p(y|x)p(x)}{p(y)}$, \(p(x|y) = \frac{p(y|x)p(x)}{p(y)}\).
-
-</code></pre>
+<h2 id="math">Math<a class="headerlink" href="#math" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>$p(x|y) = \frac{p(y|x)p(x)}{p(y)}$, \(p(x|y) = \frac{p(y|x)p(x)}{p(y)}\).
+</code></pre></div>
 
 <p><span><span class="MathJax_Preview">p(x|y) = \frac{p(y|x)p(x)}{p(y)}</span><script type="math/tex">p(x|y) = \frac{p(y|x)p(x)}{p(y)}</script></span>, <span><span class="MathJax_Preview">p(x|y) = \frac{p(y|x)p(x)}{p(y)}</span><script type="math/tex">p(x|y) = \frac{p(y|x)p(x)}{p(y)}</script></span>.</p>
 <ul>
@@ -507,43 +1180,43 @@ $p(x|y) = \frac{p(y|x)p(x)}{p(y)}$, \(p(x|y) = \frac{p(y|x)p(x)}{p(y)}\).
 </li>
 </ul>
 <p><br></p>
-<h2 id="image">Image</h2>
-<pre><code>![picture](../sources/images/ball1.gif)
-</code></pre>
+<h2 id="image">Image<a class="headerlink" href="#image" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>![picture](../sources/images/ball1.gif)
+</code></pre></div>
 
 <p><img alt="picture" src="../sources/images/ball1.gif" /></p>
 <p><br></p>
-<pre><code>![alt text1][logo]
+<div class="highlight"><pre><span></span><code>![alt text1][logo]
 [logo]: ../sources/images/ball1.gif
-</code></pre>
+</code></pre></div>
 
 <p><img alt="alt text1" src="../sources/images/ball1.gif" /></p>
 <p><br>
 <br></p>
-<h2 id="video">Video</h2>
-<h3 id="youtube">Youtube</h3>
-<pre><code>[!embed](https://www.youtube.com/watch?v=YE7VzlLtp-4)
-</code></pre>
+<h2 id="video">Video<a class="headerlink" href="#video" title="Permanent link">&para;</a></h2>
+<h3 id="youtube">Youtube<a class="headerlink" href="#youtube" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>[!embed](https://www.youtube.com/watch?v=YE7VzlLtp-4)
+</code></pre></div>
 
 <iframe width="480" height="270" src="https://www.youtube.com/embed/YE7VzlLtp-4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <p><br></p>
-<h3 id="local">Local</h3>
-<pre><code>&lt;video controls src=&quot;sources/videos/big_buck_bunny.mp4&quot; width=70%&gt;&lt;/video&gt;
-</code></pre>
+<h3 id="local">Local<a class="headerlink" href="#local" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>&lt;video controls src=&quot;../sources/videos/big_buck_bunny.mp4&quot; width=70%&gt;&lt;/video&gt;
+</code></pre></div>
 
-<video controls src="sources/videos/big_buck_bunny.mp4" width=70%></video>
+<video controls src="../sources/videos/big_buck_bunny.mp4" width=70%></video>
 
 <p><br></p>
-<h2 id="html">HTML</h2>
-<pre><code>&lt;dl&gt;
+<h2 id="html">HTML<a class="headerlink" href="#html" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>&lt;dl&gt;
   &lt;dt&gt;Definition list&lt;/dt&gt;
   &lt;dd&gt;Is something people use sometimes.&lt;/dd&gt;
 
   &lt;dt&gt;Markdown in HTML&lt;/dt&gt;
   &lt;dd&gt;Does *not* work **very** well. HTML &lt;em&gt;tags&lt;/em&gt; will &lt;b&gt;work&lt;/b&gt;, in most cases.&lt;/dd&gt;
 &lt;/dl&gt;
-</code></pre>
+</code></pre></div>
 
 <dl>
   <dt>Definition list</dt>
@@ -555,18 +1228,18 @@ $p(x|y) = \frac{p(y|x)p(x)}{p(y)}$, \(p(x|y) = \frac{p(y|x)p(x)}{p(y)}\).
 
 <p><br>
 <br></p>
-<h2 id="admonition">Admonition</h2>
+<h2 id="admonition">Admonition<a class="headerlink" href="#admonition" title="Permanent link">&para;</a></h2>
 <p>mkdocs.yml 파일에 아래처럼 추가 하면 사용 할 수 있습니다.</p>
-<pre><code>markdown_extensions:
+<div class="highlight"><pre><span></span><code>markdown_extensions:
   - admonition
-</code></pre>
+</code></pre></div>
 
 <p><br></p>
-<h3 id="note">Note</h3>
-<pre><code>!!! note &quot;Note Title&quot;
+<h3 id="note">Note<a class="headerlink" href="#note" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>!!! note &quot;Note Title&quot;
     blabla
     blabla
-</code></pre>
+</code></pre></div>
 
 <div class="admonition note">
 <p class="admonition-title">Note Title</p>
@@ -574,11 +1247,11 @@ $p(x|y) = \frac{p(y|x)p(x)}{p(y)}$, \(p(x|y) = \frac{p(y|x)p(x)}{p(y)}\).
 blabla</p>
 </div>
 <p><br></p>
-<h3 id="tip">Tip</h3>
-<pre><code>!!! tip &quot;Tip Title&quot;
+<h3 id="tip">Tip<a class="headerlink" href="#tip" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>!!! tip &quot;Tip Title&quot;
     blabla
     blabla
-</code></pre>
+</code></pre></div>
 
 <div class="admonition tip">
 <p class="admonition-title">Tip Title</p>
@@ -586,11 +1259,11 @@ blabla</p>
 blabla</p>
 </div>
 <p><br></p>
-<h3 id="warning">Warning</h3>
-<pre><code>!!! warning &quot;Warning Title&quot;
+<h3 id="warning">Warning<a class="headerlink" href="#warning" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>!!! warning &quot;Warning Title&quot;
     blabla
     blabla
-</code></pre>
+</code></pre></div>
 
 <div class="admonition warning">
 <p class="admonition-title">Warning Title</p>
@@ -598,76 +1271,99 @@ blabla</p>
 blabla</p>
 </div>
 <p><br></p>
-<h3 id="danger">Danger</h3>
-<pre><code>!!! danger &quot;Danger Title&quot;
+<h3 id="danger">Danger<a class="headerlink" href="#danger" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>!!! danger &quot;Danger Title&quot;
     blabla
     blabla
-</code></pre>
+</code></pre></div>
 
 <div class="admonition dange">
 <p class="admonition-title">Danger Title</p>
 <p>blabla
 blabla</p>
 </div>
-<p><br></p> 
-                        </div>
-                    </div> <footer>
+<p><br></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="How-to_add_mkdocs_logo.html" class="btn btn-neutral float-right" title="How To Add Logo">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../index.html" class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
-  </div>
-
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer> 
-                </div>
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../index.html" title="Home" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
-
-        </section>
-
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="How-to_add_mkdocs_logo.html" title="How To Add Logo" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                How To Add Logo
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     </div>
-
-    <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
       
+    </div>
+  </div>
+</footer>
       
-        <span><a href="../index.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+    </div>
+    
+      <script src="../assets/javascripts/vendor.22b62ea4.min.js"></script>
+      <script src="../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.f6ebf1dc.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
-        <span style="margin-left: 15px"><a href="How-to_add_mkdocs_logo.html" style="color: #fcfcfc">Next &raquo;</a></span>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
-    </span>
-</div>
-    <script>
-        var base_url = '..';
-    </script>
-    <script src="../js/theme.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
-    <script src="../search/main.js" defer></script>
-    <script defer>
-        window.onload = function() {
-            SphinxRtdTheme.Navigation.enable({
-                {
-                    'true'
-                    if config.theme.sticky_navigation
-                    else 'false'
-                }
-            });
-        };
-    </script>
-
-</body>
-
+    
+  </body>
 </html>
