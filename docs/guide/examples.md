@@ -308,6 +308,49 @@ s = "There is no highlighting for this."
 But let's throw in a <b>tag</b>.
 ```
 
+### grouping code blocks
+
+
+=== "Bash"
+    ``` bash
+    #!/bin/bash
+
+    echo "Hello world!"
+    ```
+
+=== "C"
+    ``` c
+    #include <stdio.h>
+
+    int main(void) {
+      printf("Hello world!\n");
+      return 0;
+    }
+    ```
+
+=== "C++"
+    ``` c++
+    #include <iostream>
+
+    int main(void) {
+      std::cout << "Hello world!" << std::endl;
+      return 0;
+    }
+    ```
+
+=== "C#"
+    ``` c#
+    using System;
+
+    class Program {
+      static void Main(string[] args) {
+        Console.WriteLine("Hello world!");
+      }
+    }
+    ```
+
+
+
 
 <br>
 
@@ -429,10 +472,10 @@ $p(x|y) = \frac{p(y|x)p(x)}{p(y)}$, \(p(x|y) = \frac{p(y|x)p(x)}{p(y)}\).
 ### Local
 
 ```
-<video controls src="sources/videos/big_buck_bunny.mp4" width=70%></video>
+<video controls src="../sources/videos/big_buck_bunny.mp4" width=70%></video>
 ```
 
-<video controls src="sources/videos/big_buck_bunny.mp4" width=70%></video>
+<video controls src="../sources/videos/big_buck_bunny.mp4" width=70%></video>
 
 <br>
 

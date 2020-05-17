@@ -1,6 +1,8 @@
 site_name: 'MKDocs Wiki'
+
 theme:
-    name: readthedocs
+    name: material
+    # name: readthedocs
     logo: 'sources/images/Jack_Icon.png'
 
 nav: 
@@ -11,27 +13,48 @@ nav:
     - 'How To Change mkdocs MaxWidth': guide/How-to_change_mkdocs_maxwidth.md
 
 
+
+
 markdown_extensions:
-  - admonition
-  - pymdownx.tasklist
-  - pymdownx.emoji
-  - pymdownx.b64
+  - markdown.extensions.admonition
+  - markdown.extensions.attr_list
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
   - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  # - pymdownx.highlight:
+  #     linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
   - pyembed.markdown
 
-  # - pymdownx.betterem
-  # - pymdownx.caret
-  # - pymdownx.critic
-  # - pymdownx.details
-  # - pymdownx.inlinehilite
-  # - pymdownx.magiclink
-  # - pymdownx.mark
-  # - pymdownx.smartsymbols
-  # - pymdownx.superfences
-  # - pymdownx.tilde
-
-extra_css:
-  - css/github.css
+# extra_css:
+#   - css/styles.css
 
 
 use_directory_urls: false

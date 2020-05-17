@@ -7,6 +7,7 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 ```
 pip install mkdocs
 pip install pymdownx
+pip install mkdocs-material
 pip install pyembed
 
 ```
