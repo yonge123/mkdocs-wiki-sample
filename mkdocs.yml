@@ -1,4 +1,4 @@
-site_name: 'Wiki'
+site_name: 'MKDocs Wiki'
 theme:
     name: readthedocs
     logo: 'sources/images/Jack_Icon.png'
