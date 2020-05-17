@@ -148,24 +148,24 @@ you can quote that without having to manually prepend `>` to every line!
 ## Link
 
 ```
-[markdown_Page](./markdown_test.md)
+[go back to home page](../index.md) 
 ```
 
-[markdown_Page](./markdown_test.md)
+[go back to home page](../index.md) 
 
 <br>
 
 ```
 
-[markdown_Page]
+[go back to home page]
 
-[markdown_Page]: ./markdown_test.md
+[go back to home page]: ../index.md
 
 ```
 
-[markdown_Page]
+[go back to home page]
 
-[markdown_Page]: ./markdown_test.md
+[go back to home page]: ../index.md
 
 <br>
 
@@ -174,13 +174,13 @@ Sphinx Python-Markdown 에서 아래 처럼 table 안에 있는 link 형식으�
 ```
 | header 1 | header 2 | header 3 |
 | ---      |  ------  |---------:|
-| cell 1   | cell 2   | [markdown_Page](./markdown_test.md)|
+| cell 1   | cell 2   | [go back to home page](../index.md) |
 
 ```
 
 | header 1 | header 2 | header 3 |
 | --- |  -----  | ------ |
-| cell 1   | cell 2   | [markdown_Page](./markdown_test.md)|
+| cell 1   | cell 2   | [go back to home page](../index.md) |
 
 <br>
 
@@ -528,8 +528,5 @@ markdown_extensions:
     blabla
 
 <br>
-
-
-## Mermaid
 
 
