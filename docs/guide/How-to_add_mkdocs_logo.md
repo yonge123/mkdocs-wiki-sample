@@ -14,7 +14,7 @@ With
 
 ```
 <a href="{{nav.homepage.url|url}}" class="icon icon-home"> {{ config.site_name }}
-	<img src= "{{base_url}}/{{config.logo}}" class="logo" alt="logo"/>
+	<img src= "{{base_url}}/{{ config.theme.logo}}" class="logo" alt="logo"/>
 </a>
 ```
 

@@ -25,9 +25,18 @@ Sample
 mkdir mkdocs_test
 cd mkdocs_test
 mkdocs new .
+
+# site/ -> gitignore
+echo "site/" >> .gitignore
+
+# start serve
 mkdocs serve
+
+# build Site
 mkdocs build
 
+# push to github gh-pages
+mkdocs gh-pages
 ```
 
 ## Project layout

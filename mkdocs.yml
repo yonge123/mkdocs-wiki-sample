@@ -1,12 +1,7 @@
 site_name: 'Wiki'
-logo: 'sources/images/Jack_Icon.png'
-
 theme:
     name: readthedocs
-    highlightjs: true
-    hljs_languages:
-        - yaml
-        - rust
+    logo: 'sources/images/Jack_Icon.png'
 
 nav: 
   - Home: index.md
