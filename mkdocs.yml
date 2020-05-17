@@ -9,7 +9,6 @@ nav:
     - 'Example': guide/examples.md
     - 'How To Add Logo': guide/How-to_add_mkdocs_logo.md
     - 'How To Change mkdocs MaxWidth': guide/How-to_change_mkdocs_maxwidth.md
-    - 'Test': guide/markdown_test.md
 
 
 markdown_extensions:
@@ -31,8 +30,8 @@ markdown_extensions:
   # - pymdownx.superfences
   # - pymdownx.tilde
 
-# extra_css:
-#   - css/theme_extra.css
+extra_css:
+  - css/github.css
 
 
 use_directory_urls: false
