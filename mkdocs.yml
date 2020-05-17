@@ -1,14 +1,20 @@
 site_name: 'Wiki'
 logo: 'sources/images/Jack_Icon.png'
-theme: readthedocs
+
+theme:
+    name: readthedocs
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - rust
 
 nav: 
   - Home: index.md
   - Guide: 
-    - 'Example': examples.md
-    - 'How To Add Logo': How-to_add_mkdocs_logo.md
-    - 'How To Change mkdocs MaxWidth': How-to_change_mkdocs_maxwidth.md
-    - 'Test': test.md
+    - 'Example': guide/examples.md
+    - 'How To Add Logo': guide/How-to_add_mkdocs_logo.md
+    - 'How To Change mkdocs MaxWidth': guide/How-to_change_mkdocs_maxwidth.md
+    - 'Test': guide/test.md
 
 
 markdown_extensions:
