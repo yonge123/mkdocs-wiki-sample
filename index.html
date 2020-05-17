@@ -151,8 +151,37 @@ mkdocs serve
 # build Site
 mkdocs build
 
+
+
 # push to github gh-pages
 mkdocs gh-deploy
+
+
+
+
+# push to gitlab ci  
+
+- reference: [https://gitlab.com/pages/mkdocs/commit/48f7b16f3d1ce0bf4b8fd30b29b3ef94b77e496d](https://gitlab.com/pages/mkdocs/commit/48f7b16f3d1ce0bf4b8fd30b29b3ef94b77e496d)
+- create .gitlab-ci.yml file 
+
+image: python:3.8-buster
+
+before_script:
+  - pip install mkdocs
+  ## Add your custom theme if not inside a theme_dir
+  ## (https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
+  # - pip install mkdocs-material
+
+pages:
+  script:
+  - mkdocs build
+  - mv site public
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
+
 </code></pre>
 
 <h2 id="project-layout">Project layout</h2>
