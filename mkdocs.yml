@@ -14,7 +14,7 @@ nav:
     - 'Example': guide/examples.md
     - 'How To Add Logo': guide/How-to_add_mkdocs_logo.md
     - 'How To Change mkdocs MaxWidth': guide/How-to_change_mkdocs_maxwidth.md
-    - 'Test': guide/test.md
+    - 'Test': guide/markdown_test.md
 
 
 markdown_extensions:
@@ -43,4 +43,4 @@ markdown_extensions:
 use_directory_urls: false
 
 extra_javascript:
-  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+    - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'

@@ -393,21 +393,21 @@ $p(x|y) = \frac{p(y|x)p(x)}{p(y)}$, \(p(x|y) = \frac{p(y|x)p(x)}{p(y)}\).
 ## Image
 
 ```
-![picture](sources/images/ball1.gif)
+![picture](../sources/images/ball1.gif)
 ```
 
-![picture](sources/images/ball1.gif)
+![picture](../sources/images/ball1.gif)
 
 <br>
 
 ```
 ![alt text1][logo]
-[logo]: sources/images/ball1.gif
+[logo]: ../sources/images/ball1.gif
 ```
 
 ![alt text1][logo]
 
-[logo]: sources/images/ball1.gif
+[logo]: ../sources/images/ball1.gif
 
 
 
@@ -528,3 +528,8 @@ markdown_extensions:
     blabla
 
 <br>
+
+
+## Mermaid
+
+

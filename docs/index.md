@@ -8,6 +8,7 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 pip install mkdocs
 pip install pymdownx
 pip install pyembed
+
 ```
 
 
@@ -35,3 +36,12 @@ mkdocs build
     docs/
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
+
+
+## MKDocs Extension
+
+- https://python-markdown.github.io/extensions/
+- https://facelessuser.github.io/pymdown-extensions/
+- https://github.com/Python-Markdown/markdown/wiki/Third-Party-Extensions
+- https://github.com/pyembed/pyembed-markdown
+- https://github.com/mkdocs/mkdocs/wiki/MkDocs-Plugins
