@@ -22,8 +22,11 @@ pip install pyembed
 Sample
 
 ```
+# create project folder
 mkdir mkdocs_test
 cd mkdocs_test
+
+# create new mkdocs project in this directory
 mkdocs new .
 
 # site/ -> gitignore
@@ -49,8 +52,14 @@ mkdocs gh-pages
 
 ## MKDocs Extension
 
-- https://python-markdown.github.io/extensions/
-- https://facelessuser.github.io/pymdown-extensions/
-- https://github.com/Python-Markdown/markdown/wiki/Third-Party-Extensions
-- https://github.com/pyembed/pyembed-markdown
-- https://github.com/mkdocs/mkdocs/wiki/MkDocs-Plugins
+- [https://python-markdown.github.io/extensions/](https://python-markdown.github.io/extensions/)
+- [https://facelessuser.github.io/pymdown-extensions/](https://facelessuser.github.io/pymdown-extensions/)
+- [https://github.com/Python-Markdown/markdown/wiki/Third-Party-Extensions](https://github.com/Python-Markdown/markdown/wiki/Third-Party-Extensions)
+- [https://github.com/pyembed/pyembed-markdown](https://github.com/pyembed/pyembed-markdown)
+- [https://github.com/mkdocs/mkdocs/wiki/MkDocs-Plugins](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Plugins)
+
+
+## MKDocs Plugin
+
+- https://www.mkdocs.org/user-guide/plugins/#developing-plugins
+
