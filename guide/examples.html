@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <title>Example - Wiki</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" /> 
+    <script>
+        // Current page data
+        var mkdocs_page_name = {
+            {
+                page.title | tojson | safe
+            }
+        };
+        var mkdocs_page_input_path = {
+            {
+                page.file.src_path | string | tojson | safe
+            }
+        };
+        var mkdocs_page_url = {
+            {
+                page.abs_url | tojson | safe
+            }
+        };
+    </script>
+    
+    <script src="../js/jquery-2.1.1.min.js" defer></script>
+    <script src="../js/modernizr-2.8.3.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+    <div class="wy-grid-for-nav">
+
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+            <div class="wy-side-scroll">
+                <div class="wy-side-nav-search">
+                    <a href=".." class="icon icon-home"> Wiki
+                        <img src= "../sources/images/Jack_Icon.png" class="logo" alt="logo"/>
+                    </a> <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+                </div>
+
+                <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                        <ul>
+                            <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                            </li>
+                            </ul>
+                    <p class="caption"><span class="caption-text">Guide</span></p>
+                    <ul class="current" >
+                        <li class="toctree-l1 current"><a class="reference internal current" href="examples.html">Example</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#h2">H2</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#h3">H3</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#h4">H4</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#italic">Italic</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bold">Bold</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bold-with-italic">Bold with Italic</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#scratch">Scratch</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mark">Mark</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#link">Link</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#table">Table</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#source-code">source code</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#java">Java</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#python">python</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ruby">ruby</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#text">text</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#task-lists">Task lists</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#emoji">Emoji</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#math">Math</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#image">Image</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#video">Video</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#youtube">Youtube</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#local">Local</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#html">HTML</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#admonition">Admonition</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#note">Note</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tip">Tip</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#warning">Warning</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#danger">Danger</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mermaid">Mermaid</a>
+    </li>
+    </ul>
+                        </li>
+                        <li class="toctree-l1"><a class="reference internal" href="How-to_add_mkdocs_logo.html">How To Add Logo</a>
+                        </li>
+                        <li class="toctree-l1"><a class="reference internal" href="How-to_change_mkdocs_maxwidth.html">How To Change mkdocs MaxWidth</a>
+                        </li>
+                        <li class="toctree-l1"><a class="reference internal" href="markdown_test.html">Test</a>
+                        </li>
+                        </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+            
+            <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+                <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                <a href="..">Wiki</a>
+            </nav>
+
+            
+            <div class="wy-nav-content">
+                <div class="rst-content">
+                    <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Guide &raquo;</li>
+        
+      
+    
+    <li>Example</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+                    <div role="main">
+                        <div class="section">
+                             <h1 id="markdown-example">Markdown Example</h1>
+<pre><code># Markdown Example
+
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+</code></pre>
+
+<h2 id="h2">H2</h2>
+<h3 id="h3">H3</h3>
+<h4 id="h4">H4</h4>
+<h5 id="h5">H5</h5>
+<h6 id="h6">H6</h6>
+<p><br></p>
+<h2 id="italic">Italic</h2>
+<pre><code>Emphasis, aka italics, with *asterisks* or _underscores_.
+</code></pre>
+
+<p>Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.</p>
+<p><br></p>
+<h2 id="bold">Bold</h2>
+<pre><code>Strong emphasis, aka bold, with double **asterisks** or __underscores__.
+</code></pre>
+
+<p>Strong emphasis, aka bold, with double <strong>asterisks</strong> or <strong>underscores</strong>.</p>
+<p><br></p>
+<h2 id="bold-with-italic">Bold with Italic</h2>
+<pre><code>Combined emphasis with **asterisks and _underscores_**.
+</code></pre>
+
+<p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p>
+<p><br></p>
+<h2 id="scratch">Scratch</h2>
+<pre><code>&lt;del&gt;Scratch this&lt;/del&gt;
+</code></pre>
+
+<p><del>Scratch this</del></p>
+<p><br></p>
+<h2 id="mark">Mark</h2>
+<pre><code>&lt;mark&gt;mark me&lt;/mark&gt;
+</code></pre>
+
+<p><mark>mark me</mark></p>
+<p><br></p>
+<pre><code>- fruit
+  - banana
+  - mango
+  - pitaya
+</code></pre>
+
+<ul>
+<li>fruit</li>
+<li>banana</li>
+<li>mango</li>
+<li>pitaya</li>
+</ul>
+<p><br></p>
+<pre><code>- `#F00`
+- `#F00A`
+- `#FF0000`
+- `#FF0000AA`
+- `RGB(0,255,0)`
+- `RGB(0%,100%,0%)`
+- `RGBA(0,255,0,0.3)`
+- `HSL(540,70%,50%)`
+- `HSLA(540,70%,50%,0.3)`
+</code></pre>
+
+<ul>
+<li><code>#F00</code></li>
+<li><code>#F00A</code></li>
+<li><code>#FF0000</code></li>
+<li><code>#FF0000AA</code></li>
+<li><code>RGB(0,255,0)</code></li>
+<li><code>RGB(0%,100%,0%)</code></li>
+<li><code>RGBA(0,255,0,0.3)</code></li>
+<li><code>HSL(540,70%,50%)</code></li>
+<li><code>HSLA(540,70%,50%,0.3)</code></li>
+</ul>
+<p><br></p>
+<pre><code>Inline `code` has `back-ticks around` it.
+</code></pre>
+
+<p>Inline <code>code</code> has <code>back-ticks around</code> it.</p>
+<p><br></p>
+<pre><code>&gt;&gt;&gt;
+
+If you paste a message from somewhere else
+
+that spans multiple lines,
+
+you can quote that without having to manually prepend `&gt;` to every line!
+
+&gt;&gt;&gt;
+</code></pre>
+
+<blockquote>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+</blockquote>
+<p>If you paste a message from somewhere else</p>
+<p>that spans multiple lines,</p>
+<p>you can quote that without having to manually prepend <code>&gt;</code> to every line!</p>
+<blockquote>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+</blockquote>
+<p><br></p>
+<h2 id="link">Link</h2>
+<pre><code>[markdown_Page](./markdown_test.md)
+</code></pre>
+
+<p><a href="markdown_test.html">markdown_Page</a></p>
+<p><br></p>
+<pre><code>
+[markdown_Page]
+
+[markdown_Page]: ./markdown_test.md
+
+</code></pre>
+
+<p><a href="markdown_test.html">markdown_Page</a></p>
+<p><br></p>
+<p>Sphinx Python-Markdown 에서 아래 처럼 table 안에 있는 link 형식으로 작성 시 파싱 문제 있음 </p>
+<pre><code>| header 1 | header 2 | header 3 |
+| ---      |  ------  |---------:|
+| cell 1   | cell 2   | [markdown_Page](./markdown_test.md)|
+
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>header 1</th>
+<th>header 2</th>
+<th>header 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cell 1</td>
+<td>cell 2</td>
+<td><a href="markdown_test.html">markdown_Page</a></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h2 id="table">Table</h2>
+<pre><code>| header 1 | header 2 | header 3 |
+| ---      |  ------  |---------:|
+| cell 1   | cell 2   | cell 3   |
+| cell 4 | cell 5 is longer | cell 6 is much longer than the others, but that's ok. It will eventually wrap the text when the cell is too large for the display size. |
+| cell 7   |          | cell &lt;br&gt; 9 |
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>header 1</th>
+<th>header 2</th>
+<th align="right">header 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cell 1</td>
+<td>cell 2</td>
+<td align="right">cell 3</td>
+</tr>
+<tr>
+<td>cell 4</td>
+<td>cell 5 is longer</td>
+<td align="right">cell 6 is much longer than the others, but that's ok. It will eventually wrap the text when the cell is too large for the display size.</td>
+</tr>
+<tr>
+<td>cell 7</td>
+<td></td>
+<td align="right">cell <br> 9</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h2 id="source-code">source code</h2>
+<p><br></p>
+<h3 id="java">Java</h3>
+<pre><code>```javascript
+var s = &quot;JavaScript syntax highlighting&quot;;
+alert(s);
+```
+</code></pre>
+
+<pre><code class="javascript">var s = &quot;JavaScript syntax highlighting&quot;;
+alert(s);
+</code></pre>
+
+<p><br></p>
+<h3 id="python">python</h3>
+<pre><code>```python
+def function():
+    #indenting works just fine in the fenced code block
+    s = &quot;Python syntax highlighting&quot;
+    print s
+
+try:
+    from DistUtilsExtra.command import *
+except ImportError:
+    print &gt;&gt; sys.stderr, 'To build Sphinx-Theme-Brandenburg you need https://launchpad.net/python-distutils-extra'
+    sys.exit(1)
+
+
+def read_from_file(path):
+    with open(path) as input:
+        return input.read()
+```
+</code></pre>
+
+<pre><code class="python">def function():
+    #indenting works just fine in the fenced code block
+    s = &quot;Python syntax highlighting&quot;
+    print s
+
+
+try:
+    from DistUtilsExtra.command import *
+except ImportError:
+    print &gt;&gt; sys.stderr, 'To build Sphinx-Theme-Brandenburg you need https://launchpad.net/python-distutils-extra'
+    sys.exit(1)
+
+
+def read_from_file(path):
+    with open(path) as input:
+        return input.read()
+
+</code></pre>
+
+<p><br></p>
+<h3 id="ruby">ruby</h3>
+<pre><code>```ruby
+require 'redcarpet'
+markdown = Redcarpet.new(&quot;Hello World!&quot;)
+puts markdown.to_html
+```
+</code></pre>
+
+<pre><code class="ruby">require 'redcarpet'
+markdown = Redcarpet.new(&quot;Hello World!&quot;)
+puts markdown.to_html
+</code></pre>
+
+<p><br></p>
+<h3 id="text">text</h3>
+<pre><code>```
+No language indicated, so no syntax highlighting.
+s = &quot;There is no highlighting for this.&quot;
+But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+```
+</code></pre>
+
+<pre><code>No language indicated, so no syntax highlighting.
+s = &quot;There is no highlighting for this.&quot;
+But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+</code></pre>
+
+<p><br></p>
+<h2 id="task-lists">Task lists</h2>
+<pre><code>- [X] item 1
+    * [X] item A
+    * [ ] item B
+        more text
+        + [x] item a
+        + [ ] item b
+        + [x] item c
+    * [X] item C
+- [ ] item 2
+- [ ] item 3
+</code></pre>
+
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> item 1<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> item A</li>
+<li class="task-list-item"><input type="checkbox" disabled/> item B
+    more text<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> item a</li>
+<li class="task-list-item"><input type="checkbox" disabled/> item b</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> item c</li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> item C</li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" disabled/> item 2</li>
+<li class="task-list-item"><input type="checkbox" disabled/> item 3</li>
+</ul>
+<p><br></p>
+<h2 id="emoji">Emoji</h2>
+<pre><code>Sometimes you want to :monkey: around a bit and add some :star2: to your :speech_balloon:. Well we have a gift for you:
+
+:zap: You can use emoji anywhere GFM is supported. :v:
+
+You can use it to point out a :bug: or warn about :speak_no_evil: patches. And if someone improves your really :snail: code, send them some :birthday:. People will :heart: you for that.
+
+If you are new to this, don't be :fearful:. You can easily join the emoji :family:. All you need to do is to look up one of the supported codes.
+
+Consult the [Emoji Cheat Sheet](https://www.emojicopy.com) for a list of all supported emoji codes. :thumbsup:
+</code></pre>
+
+<p>Sometimes you want to <img alt="🐒" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f412.png" title=":monkey:" /> around a bit and add some <img alt="🌟" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f31f.png" title=":star2:" /> to your <img alt="💬" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4ac.png" title=":speech_balloon:" />. Well we have a gift for you:</p>
+<p><img alt="⚡️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/26a1.png" title=":zap:" /> You can use emoji anywhere GFM is supported. <img alt="✌️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/270c.png" title=":v:" /></p>
+<p>You can use it to point out a <img alt="🐛" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f41b.png" title=":bug:" /> or warn about <img alt="🙊" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f64a.png" title=":speak_no_evil:" /> patches. And if someone improves your really <img alt="🐌" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f40c.png" title=":snail:" /> code, send them some <img alt="🎂" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f382.png" title=":birthday:" />. People will <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2764.png" title=":heart:" /> you for that.</p>
+<p>If you are new to this, don't be <img alt="😨" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f628.png" title=":fearful:" />. You can easily join the emoji <img alt="👪" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f46a.png" title=":family:" />. All you need to do is to look up one of the supported codes.</p>
+<p>Consult the <a href="https://www.emojicopy.com">Emoji Cheat Sheet</a> for a list of all supported emoji codes. <img alt="👍" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44d.png" title=":thumbsup:" /></p>
+<p><br></p>
+<h2 id="math">Math</h2>
+<pre><code>
+$p(x|y) = \frac{p(y|x)p(x)}{p(y)}$, \(p(x|y) = \frac{p(y|x)p(x)}{p(y)}\).
+
+</code></pre>
+
+<p><span><span class="MathJax_Preview">p(x|y) = \frac{p(y|x)p(x)}{p(y)}</span><script type="math/tex">p(x|y) = \frac{p(y|x)p(x)}{p(y)}</script></span>, <span><span class="MathJax_Preview">p(x|y) = \frac{p(y|x)p(x)}{p(y)}</span><script type="math/tex">p(x|y) = \frac{p(y|x)p(x)}{p(y)}</script></span>.</p>
+<ul>
+<li>Reference: <ul>
+<li><a href="https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/">https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/</a></li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<h2 id="image">Image</h2>
+<pre><code>![picture](../sources/images/ball1.gif)
+</code></pre>
+
+<p><img alt="picture" src="../sources/images/ball1.gif" /></p>
+<p><br></p>
+<pre><code>![alt text1][logo]
+[logo]: ../sources/images/ball1.gif
+</code></pre>
+
+<p><img alt="alt text1" src="../sources/images/ball1.gif" /></p>
+<p><br>
+<br></p>
+<h2 id="video">Video</h2>
+<h3 id="youtube">Youtube</h3>
+<pre><code>[!embed](https://www.youtube.com/watch?v=YE7VzlLtp-4)
+</code></pre>
+
+<iframe width="480" height="270" src="https://www.youtube.com/embed/YE7VzlLtp-4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p><br></p>
+<h3 id="local">Local</h3>
+<pre><code>&lt;video controls src=&quot;sources/videos/big_buck_bunny.mp4&quot; width=70%&gt;&lt;/video&gt;
+</code></pre>
+
+<video controls src="sources/videos/big_buck_bunny.mp4" width=70%></video>
+
+<p><br></p>
+<h2 id="html">HTML</h2>
+<pre><code>&lt;dl&gt;
+  &lt;dt&gt;Definition list&lt;/dt&gt;
+  &lt;dd&gt;Is something people use sometimes.&lt;/dd&gt;
+
+  &lt;dt&gt;Markdown in HTML&lt;/dt&gt;
+  &lt;dd&gt;Does *not* work **very** well. HTML &lt;em&gt;tags&lt;/em&gt; will &lt;b&gt;work&lt;/b&gt;, in most cases.&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+
+<dl>
+  <dt>Definition list</dt>
+  <dd>Is something people use sometimes.</dd>
+
+  <dt>Markdown in HTML</dt>
+  <dd>Does *not* work **very** well. HTML <em>tags</em> will <b>work</b>, in most cases.</dd>
+</dl>
+
+<p><br>
+<br></p>
+<h2 id="admonition">Admonition</h2>
+<p>mkdocs.yml 파일에 아래처럼 추가 하면 사용 할 수 있습니다.</p>
+<pre><code>markdown_extensions:
+  - admonition
+</code></pre>
+
+<p><br></p>
+<h3 id="note">Note</h3>
+<pre><code>!!! note &quot;Note Title&quot;
+    blabla
+    blabla
+</code></pre>
+
+<div class="admonition note">
+<p class="admonition-title">Note Title</p>
+<p>blabla
+blabla</p>
+</div>
+<p><br></p>
+<h3 id="tip">Tip</h3>
+<pre><code>!!! tip &quot;Tip Title&quot;
+    blabla
+    blabla
+</code></pre>
+
+<div class="admonition tip">
+<p class="admonition-title">Tip Title</p>
+<p>blabla
+blabla</p>
+</div>
+<p><br></p>
+<h3 id="warning">Warning</h3>
+<pre><code>!!! warning &quot;Warning Title&quot;
+    blabla
+    blabla
+</code></pre>
+
+<div class="admonition warning">
+<p class="admonition-title">Warning Title</p>
+<p>blabla
+blabla</p>
+</div>
+<p><br></p>
+<h3 id="danger">Danger</h3>
+<pre><code>!!! danger &quot;Danger Title&quot;
+    blabla
+    blabla
+</code></pre>
+
+<div class="admonition dange">
+<p class="admonition-title">Danger Title</p>
+<p>blabla
+blabla</p>
+</div>
+<p><br></p>
+<h2 id="mermaid">Mermaid</h2> 
+                        </div>
+                    </div> <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="How-to_add_mkdocs_logo.html" class="btn btn-neutral float-right" title="How To Add Logo">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer> 
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../index.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="How-to_add_mkdocs_logo.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>
+        var base_url = '..';
+    </script>
+    <script src="../js/theme.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+    <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function() {
+            SphinxRtdTheme.Navigation.enable({
+                {
+                    'true'
+                    if config.theme.sticky_navigation
+                    else 'false'
+                }
+            });
+        };
+    </script>
+
+</body>
+
+</html>
