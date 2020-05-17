@@ -37,8 +37,6 @@
     <script src="../js/jquery-2.1.1.min.js" defer></script>
     <script src="../js/modernizr-2.8.3.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>
     <script>
         hljs.initHighlightingOnLoad();
     </script>  
@@ -129,7 +127,7 @@
 
 <p>With </p>
 <pre><code>&lt;a href=&quot;{{nav.homepage.url|url}}&quot; class=&quot;icon icon-home&quot;&gt; {{ config.site_name }}
-    &lt;img src= &quot;{{base_url}}/{{config.logo}}&quot; class=&quot;logo&quot; alt=&quot;logo&quot;/&gt;
+    &lt;img src= &quot;{{base_url}}/{{ config.theme.logo}}&quot; class=&quot;logo&quot; alt=&quot;logo&quot;/&gt;
 &lt;/a&gt;
 </code></pre>
 
