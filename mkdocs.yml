@@ -1,0 +1,40 @@
+site_name: 'Wiki'
+logo: 'sources/images/Jack_Icon.png'
+theme: readthedocs
+
+nav: 
+  - Home: index.md
+  - Guide: 
+    - 'Example': examples.md
+    - 'How To Add Logo': How-to_add_mkdocs_logo.md
+    - 'How To Change mkdocs MaxWidth': How-to_change_mkdocs_maxwidth.md
+    - 'Test': test.md
+
+
+markdown_extensions:
+  - admonition
+  - pymdownx.tasklist
+  - pymdownx.emoji
+  - pymdownx.b64
+  - pymdownx.arithmatex
+  - pyembed.markdown
+
+  # - pymdownx.betterem
+  # - pymdownx.caret
+  # - pymdownx.critic
+  # - pymdownx.details
+  # - pymdownx.inlinehilite
+  # - pymdownx.magiclink
+  # - pymdownx.mark
+  # - pymdownx.smartsymbols
+  # - pymdownx.superfences
+  # - pymdownx.tilde
+
+# extra_css:
+#   - css/theme_extra.css
+
+
+use_directory_urls: false
+
+extra_javascript:
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
