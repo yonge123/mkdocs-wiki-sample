@@ -1,3 +1,5 @@
+# pip install mkdocs ===============================================================================
+
 site_name: 'MKDocs Wiki'
 
 theme:
@@ -9,52 +11,66 @@ nav:
   - Home: index.md
   - Guide: 
     - 'Example': guide/examples.md
-    - 'How To Add Logo': guide/How-to_add_mkdocs_logo.md
-    - 'How To Change mkdocs MaxWidth': guide/How-to_change_mkdocs_maxwidth.md
+    - 'How To Add Logo': guide/How-to_add_readthedocs_theme_logo.md
+    - 'How To Change mkdocs MaxWidth': guide/How-to_change_readthedocs_theme_maxwidth.md
 
 
+# Material Theme
+theme:
 
+    # pip install mkdocs-material
+    name: material
+
+    # name: readthedocs
+
+    logo: 'sources/images/toiion_logo.png'
 
 markdown_extensions:
-  - markdown.extensions.admonition
-  - markdown.extensions.attr_list
-  - markdown.extensions.codehilite:
-      guess_lang: false
-  - markdown.extensions.def_list
-  - markdown.extensions.footnotes
-  - markdown.extensions.meta
-  - markdown.extensions.toc:
-      permalink: true
-  - pymdownx.arithmatex
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
-  - pymdownx.critic
-  - pymdownx.details
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-  # - pymdownx.highlight:
-  #     linenums_style: pymdownx-inline
-  - pymdownx.inlinehilite
-  - pymdownx.keys
-  - pymdownx.magiclink:
-      repo_url_shorthand: true
-      user: squidfunk
-      repo: mkdocs-material
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.snippets:
-      check_paths: true
-  - pymdownx.superfences
-  - pymdownx.tabbed
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.tilde
-  - pyembed.markdown
+
+    - markdown.extensions.admonition
+    - markdown.extensions.attr_list
+    - markdown.extensions.codehilite:
+        guess_lang: false
+    - markdown.extensions.def_list
+    - markdown.extensions.footnotes
+    - markdown.extensions.meta
+    - markdown.extensions.toc:
+        permalink: true
+
+    # pip install pymdownx ==============================
+    - pymdownx.arithmatex
+    - pymdownx.betterem:
+        smart_enable: all
+    - pymdownx.caret
+    - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+    # - pymdownx.highlight:
+    #     linenums_style: pymdownx-inline
+    - pymdownx.inlinehilite
+    - pymdownx.keys
+    - pymdownx.magiclink:
+        repo_url_shorthand: true
+        user: squidfunk
+        repo: mkdocs-material
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.snippets:
+        check_paths: true
+    - pymdownx.superfences
+    - pymdownx.tabbed
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.tilde
+
+    # pip install pyembed (for youtube video) ================================
+    - pyembed.markdown
+
 
 # extra_css:
-#   - css/styles.css
+#   - css/theme_extra.css
 
 
 use_directory_urls: false
