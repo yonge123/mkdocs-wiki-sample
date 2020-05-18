@@ -2,11 +2,6 @@
 
 site_name: 'MKDocs Wiki'
 
-theme:
-    name: material
-    # name: readthedocs
-    logo: 'sources/images/Jack_Icon.png'
-
 nav: 
   - Home: index.md
   - Guide: 
@@ -20,10 +15,10 @@ theme:
 
     # pip install mkdocs-material
     name: material
-
     # name: readthedocs
 
-    logo: 'sources/images/toiion_logo.png'
+    logo: 'sources/images/Jack_Icon.png'
+
 
 markdown_extensions:
 
