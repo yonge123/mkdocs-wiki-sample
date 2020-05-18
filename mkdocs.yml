@@ -5,7 +5,7 @@ site_name: 'MKDocs Wiki'
 nav: 
   - Home: index.md
   - Guide: 
-    - 'Example': guide/examples.md
+    - 'Markdown Examples': guide/Markdown_Examples.md
     - 'How To Add Logo': guide/How-to_add_readthedocs_theme_logo.md
     - 'How To Change mkdocs MaxWidth': guide/How-to_change_readthedocs_theme_maxwidth.md
 
