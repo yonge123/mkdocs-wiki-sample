@@ -92,3 +92,29 @@ pages:
 
 - https://www.mkdocs.org/user-guide/plugins/#developing-plugins
 
+
+
+<br>
+
+## MKDocs Offline Site 
+
+Mkdocs 를 Build 후 Intranet 에서 사용시  Site 폴더 아래 모든 html 파일을 아래 처럼 변경 해야 html 실행 시 지연 없이 바로 볼수 있습니다. 
+
+이 작업을 하지 않을 경우 방화벽 까지 가서 접속인 않되는 것을 확 인 하기때문에 시간이 오래 걸립니다.
+
+인터넷이 연결 되어있을경우 크게 상관은 없습니다.
+
+
+```
+Replace 
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+
+With
+<!-- <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin> -->
+
+Replace
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+
+With
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback"> -->
+```
