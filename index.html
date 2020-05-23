@@ -11,7 +11,7 @@
       
       
       <link rel="shortcut icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.1.7">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.1">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.4c7052ca.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.71dfd922.min.css">
       
       
     
@@ -217,6 +217,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mkdocs-offline-site" class="md-nav__link">
+    MKDocs Offline Site
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -350,6 +357,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mkdocs-offline-site" class="md-nav__link">
+    MKDocs Offline Site
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -370,7 +384,6 @@
 <p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
 <h2 id="install-mkdocs">Install MKDocs<a class="headerlink" href="#install-mkdocs" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>pip install mkdocs
-pip install pymdownx
 pip install mkdocs-material
 pip install pyembed
 </code></pre></div>
@@ -451,6 +464,23 @@ docs/
 <ul>
 <li><a href="https://www.mkdocs.org/user-guide/plugins/#developing-plugins">https://www.mkdocs.org/user-guide/plugins/#developing-plugins</a></li>
 </ul>
+<p><br></p>
+<h2 id="mkdocs-offline-site">MKDocs Offline Site<a class="headerlink" href="#mkdocs-offline-site" title="Permanent link">&para;</a></h2>
+<p>Mkdocs 를 Build 후 Intranet 에서 사용시  Site 폴더 아래 모든 html 파일을 아래 처럼 변경 해야 html 실행 시 지연 없이 바로 볼수 있습니다. </p>
+<p>이 작업을 하지 않을 경우 방화벽 까지 가서 접속인 않되는 것을 확 인 하기때문에 시간이 오래 걸립니다.</p>
+<p>인터넷이 연결 되어있을경우 크게 상관은 없습니다.</p>
+<div class="highlight"><pre><span></span><code>Replace 
+&lt;link href=&quot;https://fonts.gstatic.com&quot; rel=&quot;preconnect&quot; crossorigin&gt;
+
+With
+&lt;!-- &lt;link href=&quot;https://fonts.gstatic.com&quot; rel=&quot;preconnect&quot; crossorigin&gt; --&gt;
+
+Replace
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback&quot;&gt;
+
+With
+&lt;!-- &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback&quot;&gt; --&gt;
+</code></pre></div>
                 
               
               
@@ -503,7 +533,7 @@ docs/
       
     </div>
     
-      <script src="assets/javascripts/vendor.22b62ea4.min.js"></script>
+      <script src="assets/javascripts/vendor.d710d30a.min.js"></script>
       <script src="assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
@@ -511,7 +541,7 @@ docs/
           base: ".",
           features: [],
           search: Object.assign({
-            worker: "assets/javascripts/worker/search.f6ebf1dc.min.js"
+            worker: "assets/javascripts/worker/search.27c6a5e6.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
